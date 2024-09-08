@@ -21,7 +21,7 @@ pipelines:
           fetch_materials: true 
           keep_artifacts: false
           clean_workspace: false
-          environment_variables: { env: dev }
+          environment_variables: { ENV: dev }
           approval: { type: manual }
           jobs:
             terraform:
@@ -31,7 +31,7 @@ pipelines:
           fetch_materials: true 
           keep_artifacts: false
           clean_workspace: false
-          environment_variables: { env: prod }
+          environment_variables: { ENV: prod }
           approval: { type: manual }
           jobs:
             terraform:
