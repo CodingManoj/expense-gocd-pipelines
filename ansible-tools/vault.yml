@@ -1,0 +1,29 @@
+format_version: 10                # pipeline version from gocd, based on this options would vary 
+pipelines: 
+  vault:                                            
+    group: Tools
+    label_template: "${COUNT}"
+    materials:
+      vault:
+        git: https://github.com/B58-CloudDevOps/tools-automation.git
+        branch: main
+        auto_update: true 
+        shallow_clone: true
+        display_order: -1
+        lock_behavior: none
+    secure_variables:
+        SSH_PSW: "AES:2OIP4os11Nz8gJ+jtzoUMg==:9RKApCuI7ST7rHEU5UsKuA=="
+    stages:                                       
+      - dev:                                       
+          fetch_materials: true 
+          keep_artifacts: false
+          clean_workspace: false
+          approval: { type: manual }
+          jobs:
+            terraform:
+              tasks:
+                - exec: 
+                    command: bash 
+                    arguments:
+                      - setup-tools-service.sh
+
