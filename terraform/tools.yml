@@ -24,4 +24,4 @@ pipelines:
           jobs:
             creating-tools-infra:
               tasks:
-                  - exec: { command: bash, arguments: ["run.sh"] }
+                  - exec: { command: bash, arguments: ["init.sh"] }

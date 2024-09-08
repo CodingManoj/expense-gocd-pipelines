@@ -26,7 +26,7 @@ pipelines:
           jobs:
             terraform:
               tasks:
-                - exec: { command: bash, arguments: ["run.sh"] }
+                - exec: { command: bash, arguments: ["init.sh"] }
       - prod:                                       
           fetch_materials: true 
           keep_artifacts: false
@@ -36,4 +36,4 @@ pipelines:
           jobs:
             terraform:
               tasks:
-                - exec: { command: bash, arguments: ["run.sh"] }
+                - exec: { command: bash, arguments: ["init.sh"] }
