@@ -12,7 +12,7 @@ pipelines:
         display_order: -1
         lock_behavior: none
     secure_variables:
-        SSH_PSW: "AES:2OIP4os11Nz8gJ+jtzoUMg==:9RKApCuI7ST7rHEU5UsKcduA=="
+        SSH_PSW: "DevOps321"
     stages:                                       
       - dev:                                       
           fetch_materials: true 
