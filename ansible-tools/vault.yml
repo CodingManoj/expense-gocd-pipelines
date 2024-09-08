@@ -15,7 +15,7 @@ pipelines:
     #     SSH_PSW: DevOps321
     environment_variables:
         tool_name: vault
-        SSH_PSW: DevOps321
+        SSH_PASSWORD: DevOps321
     stages:                                       
       - dev:                                       
           fetch_materials: true 
